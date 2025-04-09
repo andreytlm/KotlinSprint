@@ -1,4 +1,4 @@
-package KSL_1
+package KotlinSprint_Task1
 
 
 fun main() {
