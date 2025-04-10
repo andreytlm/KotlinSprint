@@ -1,30 +1,13 @@
 package org.example.KotlinSprint_Lesson2
 
 fun main() {
-    val hoursOfDeparture = 0
-    val minutesOfDeparture = 57
-    val minutesWay = 457
+    val summaryMinutes = hoursOfDeparture * 60 + minutesOfDeparture + minutesInWay
+    val hoursOfArrive = (summaryMinutes / 60) % 24
+    val minutesOfArrive = summaryMinutes % 60
 
-    val minutesToHours = minutesWay / 60
-    val dayFormat = (hoursOfDeparture+minutesToHours) % 24
-    var hoursOfArriveTrain:Int
-    if (hoursOfDeparture+dayFormat>24) {
-        hoursOfArriveTrain = dayFormat
-    }
-    else {
-        hoursOfArriveTrain = hoursOfDeparture + dayFormat
-    }
-
-    val remainderMinutes = minutesWay % 60
-    val remainderMinutesRest = minutesOfDeparture+remainderMinutes
-    var minutesOfArriveTrain: Int
-    var hoursFromRestMinutes: Int
-    if (remainderMinutesRest>60) {
-        var minutesOfArriveTrain =
-    }
-
-
-
-    println("Время прибытия поезда $hoursOfArriveTrain:$minutesOfArriveTrain")
+    println("Поезд прибывает в ${"%02d".format(hoursOfArrive)}:${"%02d".format(minutesOfArrive)}")
 }
 
+const val hoursOfDeparture = 9
+const val minutesOfDeparture = 39
+const val minutesInWay = 457
