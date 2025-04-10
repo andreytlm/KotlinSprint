@@ -7,7 +7,7 @@ fun main() {
     val internSalary = 20000
     val expenditureOfStaff = numberOfStaff * staffSalary
     val expenditureOfAllStaff = (numberOfIntern * internSalary) + expenditureOfStaff
-    val averageSalaryForAllStaff = expenditureOfAllStaff / (numberOfStaff+numberOfIntern)
+    val averageSalaryForAllStaff = expenditureOfAllStaff / (numberOfStaff + numberOfIntern)
 
     println(expenditureOfStaff)
     println(expenditureOfAllStaff)
