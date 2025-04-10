@@ -1,13 +1,16 @@
 package KotlinSprint_Task3
 
-
 fun main() {
-    val year: Int = 1961
+    val year: String = "1961"
     var hour = "09"
     var minute = "07"
-    println("Год полета - $year")
-    println("Взлет - $hour:$minute")
+
+    println(year)
+    println(hour)
+    println(minute)
+
     hour = "10"
     minute = "55"
-    println("Посадка - $hour:$minute")
+
+    println("$hour:$minute")
 }
