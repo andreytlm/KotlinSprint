@@ -3,11 +3,13 @@ package KotlinSprint_Lesson2
 fun main() {
     val crystalOre = 7
     val metalOre = 11
-    val buffWorkedForCrystalOre = crystalOre * BUFF_20
-    val buffWorkedForMetalOre = metalOre * BUFF_20
+    val buffPlayer = 20
 
-    println("Now your crystal ore = ${buffWorkedForCrystalOre.toInt()}")
-    println("Now your metal ore = ${buffWorkedForMetalOre.toInt()}")
+    val crystalOreAfterBuff = (crystalOre.toDouble() / TO_PROCENT) * buffPlayer.toDouble() + crystalOre
+    val metalOreAfterBuff = (metalOre.toDouble() / TO_PROCENT) * buffPlayer.toDouble() + metalOre
+
+    println("Now your crystal ore = ${crystalOreAfterBuff.toInt()}")
+    println("Now your metal ore = ${metalOreAfterBuff.toInt()}")
 }
 
-const val BUFF_20 = 1.2
+const val TO_PROCENT = 100
