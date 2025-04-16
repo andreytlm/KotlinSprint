@@ -1,15 +1,20 @@
 package lesson3
 
 fun main() {
-    var startMove = "E2"
-    var endMove = "E4"
-    var counterOfMoves = 1
+    var trainingDay = 5
+    var trainArms = trainingDay % PARITY_CHECK == NON_PARITY_NUMBER
+    var trainingPress = trainArms
+    var trainigLegs = !trainingPress
+    var trainingBack = trainigLegs
 
-    println("$startMove-$endMove, number of move = $counterOfMoves")
+println("""
+    |Упражнения для рук: $trainArms
+    |Упражнения для ног: $trainigLegs  
+    |Упражнения для спины: $trainingBack
+    |Упражнения для пресса: $trainingPress    
+""".trimMargin())
 
-    startMove = "D2"
-    endMove = "D${startMove[1].toString().toInt() + 1}"
-    counterOfMoves ++
 
-    println("$startMove-$endMove, number of move = $counterOfMoves")
-    }
+}
+const val PARITY_CHECK = 2
+const val NON_PARITY_NUMBER = 1
