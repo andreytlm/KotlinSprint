@@ -1,13 +1,11 @@
 fun main() {
     var busyTable = 13
-    var compasionTables: Boolean = !(busyTable >= NUMBER_OF_TABLES)
 
-    println("Доступность столиков на сегодня: $compasionTables")
+    println("Доступность столиков на сегодня: ${busyTable < NUMBER_OF_TABLES}")
 
     busyTable = 9
-    compasionTables = !(busyTable >= NUMBER_OF_TABLES)
 
-    println("Доступность столиков на завтра: $compasionTables")
+    println("Доступность столиков на завтра: ${busyTable < NUMBER_OF_TABLES}")
 }
 
 const val NUMBER_OF_TABLES = 13
