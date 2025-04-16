@@ -1,13 +1,15 @@
 fun main() {
     var checkWeightAverage = 20
     var checkVolumeAverage = 80
+    var checkCondition = checkWeightAverage > MIN_WEIGHT_FOR_AVERAGE && checkWeightAverage <= MAX_WEIGHT_FOR_AVERAGE && checkVolumeAverage < VOLUME_FOR_AVERAGE
 
-    println("Груз с весом $checkWeightAverage кг и объемом $checkVolumeAverage л соответствует категории 'Average': ${checkWeightAverage > MIN_WEIGHT_FOR_AVERAGE && checkWeightAverage <= MAX_WEIGHT_FOR_AVERAGE && checkVolumeAverage < VOLUME_FOR_AVERAGE} ")
+    println("Груз с весом $checkWeightAverage кг и объемом $checkVolumeAverage л соответствует категории 'Average': $checkCondition")
 
     checkWeightAverage = 50
     checkVolumeAverage = 100
+    checkCondition = checkWeightAverage > MIN_WEIGHT_FOR_AVERAGE && checkWeightAverage <= MAX_WEIGHT_FOR_AVERAGE && checkVolumeAverage < VOLUME_FOR_AVERAGE
 
-    println("Груз с весом $checkWeightAverage кг и объемом $checkVolumeAverage л соответствует категории 'Average': ${checkWeightAverage > MIN_WEIGHT_FOR_AVERAGE && checkWeightAverage <= MAX_WEIGHT_FOR_AVERAGE && checkVolumeAverage < VOLUME_FOR_AVERAGE} ")
+    println("Груз с весом $checkWeightAverage кг и объемом $checkVolumeAverage л соответствует категории 'Average': $checkCondition ")
 }
 
 const val MIN_WEIGHT_FOR_AVERAGE = 35 // не включительно
